@@ -24,7 +24,6 @@ int main(void)
 		m = i;
 		for (j = n; j < 57; j++)
 		{
-			o = j + 1;
 			for (k = m; k <= 57; k++)
 			{
 				for (l = o; l <= 57; l++)
