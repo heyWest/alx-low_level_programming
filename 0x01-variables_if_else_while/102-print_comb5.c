@@ -14,6 +14,7 @@ int main(void)
 	int n = 48;
 
 	int i;
+	int l;
 	int j = 48;
 
 	int k = 48;
