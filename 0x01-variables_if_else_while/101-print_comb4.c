@@ -26,7 +26,7 @@ int main(void)
 			{
 				putchar(i);
 				putchar(j);
-				puthcar(k);
+				putcar(k);
 				putchar(',');
 				putchar(' ');
 				k++;
