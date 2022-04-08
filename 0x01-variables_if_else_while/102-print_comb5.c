@@ -37,8 +37,8 @@ int main(void)
 						break;
 					putchar(',');
 					putchar(' ');
+					o = 48;
 				}
-				o = 48;
 			}
 		}
 	}
