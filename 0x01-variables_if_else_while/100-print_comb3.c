@@ -9,9 +9,12 @@ int main(void)
 {
 	int x = 49;
 
-	for (int i = 48; i < 57; i++)
+	int i;
+	int m;
+
+	for (i = 48; i < 57; i++)
 	{
-		for (int m = x; m <= 57; m++)
+		for (m = x; m <= 57; m++)
 		{
 			putchar(i);
 			putchar(m);
