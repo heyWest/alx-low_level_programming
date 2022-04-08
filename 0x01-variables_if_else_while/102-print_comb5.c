@@ -9,7 +9,7 @@ int main(void)
 {
 	int m = 48;
 
-	int o = 48;
+	int o = 49;
 
 	int n = 48;
 
