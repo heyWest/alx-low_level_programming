@@ -40,6 +40,7 @@ int main(void)
 					o = 48;
 				}
 			}
+			o = j + 2;
 		}
 	}
 	putchar('\n');
