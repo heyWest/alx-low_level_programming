@@ -26,7 +26,9 @@ int main(void)
 			{
 				putchar(i);
 				putchar(j);
-				putcar(k);
+				putchar(k);
+				if (i == 55 && j == 56 && k == 57)
+					break;
 				putchar(',');
 				putchar(' ');
 				k++;
