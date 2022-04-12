@@ -11,7 +11,7 @@ int main(void)
 
 	int m = 0;
 
-	while (m <= 8)
+	while (m < 8)
 	{
 		_putchar(str[m]);
 		m++;
