@@ -13,9 +13,11 @@ int main(void)
 
 	int i;
 
-	unsigned int sum, fin;
+	unsigned int sum;
 
-	for (i = 2; i <= 32; i++)
+	unsigned int fin = 2;
+
+	for (i = 3; i <= 32; i++)
 	{
 		sum = a + b;
 		if (sum % 2 == 0)
