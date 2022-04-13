@@ -4,14 +4,14 @@
  * print_times_table - prints the n times table, starting with 0
  * @n: takes in a value to be computed
  * Return: Always 0.
- */
+*/
 void print_times_table(int n)
 {
 	if (n <= 15 && n > 0)
 	{
 		int i, j, k;
 
-		for (i = 1; i < n + 1; i++)
+		for (i = 0; i < n; i++)
 		{
 			for (j = 0; j <= n; j++)
 			{
