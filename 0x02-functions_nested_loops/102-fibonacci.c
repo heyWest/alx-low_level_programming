@@ -11,16 +11,18 @@ int main(void)
 
 	int b = 2;
 
-	int sum, i;
+	int i;
+
+	unsigned int sum;
 
 	printf("%d, %d, ", a, b);
 	for (i = 3; i < 50; i++)
 	{
 		sum = a + b;
-		printf("%d, ", sum);
+		printf("%u, ", sum);
 		a = b;
 		b = sum;
 	}
-	printf("%d\n", b + a);
+	printf("%u\n", b + a);
 	return (0);
 }
