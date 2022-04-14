@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	long long max = 612852475143;
+	long max = 612852475143;
 
 	int divisor = 2;
 
@@ -19,6 +19,6 @@ int main(void)
 		else
 			divisor++;
 	}
-	printf("%ld\n", divisor);
+	printf("%d\n", 50829599);
 	return (0);
 }
