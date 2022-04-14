@@ -23,4 +23,5 @@ int main(void)
 		m++;
 	}
 	printf("Buzz");
+	return (0);
 }
