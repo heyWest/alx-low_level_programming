@@ -17,7 +17,7 @@ int main(void)
 		else if ((m % 5 == 0) && (m % 3 != 0))
 			printf("Buzz ");
 		else if ((m % 5 == 0) && (m % 3 == 0))
-			printf("FizzBuzz");
+			printf("FizzBuzz ");
 		else
 			printf("%d ", m);
 		m++;
