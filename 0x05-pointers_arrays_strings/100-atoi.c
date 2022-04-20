@@ -7,13 +7,13 @@
  */
 int is_digit(unsigned int k)
 {
-	return (k >= '0' && n <= '9');
+	return (k >= '0' && k <= '9');
 }
 
 /**
  * _atoi - converts string to integer
  * @s: string pointer as a parameter
- * Return: Always 0.
+ * Return: Return the num
  */
 int _atoi(char *s)
 {
