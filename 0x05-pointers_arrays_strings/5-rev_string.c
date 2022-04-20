@@ -7,13 +7,11 @@
  */
 void rev_string(char *s)
 {
-	int len;
-
 	int j = 0;
 
 	int i, k;
 
-	char new_str[] = "";
+	const int len;
 
 	while (s[j] != '\0')
 	{
@@ -21,10 +19,9 @@ void rev_string(char *s)
 	}
 
 	i = j - 1;
-
 	k = 0;
-
-	new_str[j];
+	len = j;
+	char new_str[len];
 
 	while (i >= 0)
 	{
