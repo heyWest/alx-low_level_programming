@@ -7,8 +7,6 @@
  */
 int main(void)
 {
-	srand(time(0));
-	n = rand();
 	printf("Tada! Congrats");
 	return (0);
 }
