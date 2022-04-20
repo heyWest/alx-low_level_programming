@@ -9,8 +9,8 @@ int main(void)
 {
 	int n;
 
-	srand(time(NULL));
+	srand(time(0));
 	n = rand();
-	printf("%i\n", n);
+	printf("Tada! Congrats");
 	return (0);
 }
