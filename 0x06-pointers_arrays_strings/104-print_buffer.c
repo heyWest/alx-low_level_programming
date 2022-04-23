@@ -8,7 +8,7 @@
  */
 int is_ascii(int c)
 {
-	return (n >= 32 && n <= 126);
+	return (c >= 32 && c <= 126);
 }
 /**
  * str_tohex - prints hex values in formatted form
@@ -45,7 +45,7 @@ void str_ascii(char *str, int s, int e)
 
 	while (i < e)
 	{
-		ch = *(str + i + start);
+		ch = *(str + i + s);
 		if (!is_ascii(ch))
 			ch = 46;
 		printf("%c", ch);
@@ -66,7 +66,7 @@ void print_buffer(char *str, int size)
 	{
 		for (s = 0; s < size; s += 10)
 		{
-			e = (size - s < 10) ? size - start : 10;
+			e = (size - s < 10) ? size - s : 10;
 			printf("%08x: ", s);
 			str_tohex(str, s, e);
 			str_ascii(str, s, e);
