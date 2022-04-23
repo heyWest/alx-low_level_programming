@@ -17,8 +17,12 @@ char *cap_string(char *s)
 		if (s[i - 1] == " ")
 		{
 			if (s[i] >= 'a' && s[i] <= 'z')
+			{
 				s[i] -= 32;
+				break;
+			}
 		}
 		i++;
 	}
+	return (s);
 }
