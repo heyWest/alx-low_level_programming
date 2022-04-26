@@ -22,16 +22,19 @@ unsigned int _strspn(char *s, char *accept)
 		k = 0;
 		while (accept[k] != '\0')
 		{
-			if (accept[i] == s[k])
+			if (accept[k] == s[i])
 			{
 				count++;
 			}
 			k++;
 		}
-		acc += count;
 		if (count == 0)
 		{
 			return (acc);
+		}
+		else
+		{
+			acc += count;
 		}
 		i++;
 	}
