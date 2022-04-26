@@ -4,7 +4,7 @@
  * _strspn - get the length of a prefix substring
  * @s: pointer to string
  * @accept: variable
- * Return: accept
+ * Return: acc
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -16,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 
 	int acc = 0;
 
-	while (s[i] != '\0' && s[i] != " ")
+	while (s[i] != '\0' && s[i])
 	{
 		count = 0;
 		k = 0;
