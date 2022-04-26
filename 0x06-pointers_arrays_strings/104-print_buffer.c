@@ -2,77 +2,77 @@
 #include <stdio.h>
 
 /**
- * is_ascii - checks if an argument is a printable ascii character
- * @c: integer value
- * Return: 1 if True and 0 if False
+ * isPrintableASCII - determines if n is a printable ASCII char
+ * @n: integer
+ * Return: 1 if true, 0 if false
  */
-int is_ascii(int c)
+int isPrintableASCII(int n)
 {
 	return (n >= 32 && n <= 126);
 }
+
 /**
- * str_tohex - prints hex values in formatted form
- * @str: string to be printed
- * @s: starting point
- * @e: end point
- * Return: void
+ * printHexes - print hex values for string b in formatted form
+ * @b: string to print
+ * @start: starting position
+ * @end: ending position
  */
-void str_tohex(char *str, int s, int e)
+void printHexes(char *b, int start, int end)
 {
 	int i = 0;
 
 	while (i < 10)
 	{
-		if (i < e)
-			printf("%02x", *(str + s + i));
+		if (i < end)
+			printf("%02x", *(b + start + i));
 		else
-			printf(" ");
+			printf("  ");
 		if (i % 2)
 			printf(" ");
 		i++;
 	}
 }
+
 /**
- * str_ascii - prints ascii values for string inputs
- * @str: string input
- * @s: start point
- * @e: end point
- * Return: void
+ * printASCII - print ascii values for string b,
+ * formatted to replace nonprintable chars with '.'
+ * @b: string to print
+ * @start: starting position
+ * @end: ending position
  */
-void str_ascii(char *str, int s, int e)
+void printASCII(char *b, int start, int end)
 {
 	int ch, i = 0;
 
-	while (i < e)
+	while (i < end)
 	{
-		ch = *(str + i + start);
-		if (!is_ascii(ch))
+		ch = *(b + i + start);
+		if (!isPrintableASCII(ch))
 			ch = 46;
 		printf("%c", ch);
 		i++;
 	}
 }
+
 /**
  * print_buffer - prints a buffer
- * @str: string
- * @size: buffer size
- * Return: void
+ * @b: string
+ * @size: size of buffer
  */
-void print_buffer(char *str, int size)
+void print_buffer(char *b, int size)
 {
-	int s, e;
+	int start, end;
 
 	if (size > 0)
 	{
-		for (s = 0; s < size; s += 10)
+		for (start = 0; start < size; start += 10)
 		{
-			e = (size - s < 10) ? size - start : 10;
-			printf("%08x: ", s);
-			str_tohex(str, s, e);
-			str_ascii(str, s, e);
+			end = (size - start < 10) ? size - start : 10;
+			printf("%08x: ", start);
+			printHexes(b, start, end);
+			printASCII(b, start, end);
 			printf("\n");
 		}
-	}
-	else
+	} else
 		printf("\n");
 }
