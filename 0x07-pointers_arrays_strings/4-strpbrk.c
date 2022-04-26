@@ -10,8 +10,6 @@ char *_strpbrk(char *s, char *accept)
 {
 	int k;
 
-	int i = 0;
-
 	while (*s != '\0')
 	{
 		k = 0;
@@ -21,7 +19,7 @@ char *_strpbrk(char *s, char *accept)
 				return (s);
 			k++;
 		}
-		i++;
+		s++;
 	}
 	return (0);
 }
