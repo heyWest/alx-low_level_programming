@@ -12,7 +12,7 @@ int is_valid(char *str)
 {
 	unsigned int count = 0;
 
-	while (coutn < strlen(str))
+	while (count < strlen(str))
 	{
 		if (!isdigit(str[count]))
 			return (0);
