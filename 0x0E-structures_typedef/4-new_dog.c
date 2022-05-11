@@ -2,42 +2,48 @@
 #include "dog.h"
 
 /**
- * _copy - Make a copy of passed in argument
- * @src: source
- * Return: pointer to copied data
+ * _copy  -   Make a copy of passed in argument
+ * @src:      Data to make copy of
+ * Return:    Pointer
  */
+
 char *_copy(char *src)
 {
 	char *ptr;
-
 	int i, len;
 
 	if (src == NULL)
 	{
 		return (NULL);
 	}
+
 	for (len = 0; src[len] != '\0'; len++)
 		;
+
 	ptr = malloc(sizeof(char) * (len + 1));
+
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; src[i] != '\0'; i++)
 	{
 		ptr[i] = src[i];
 	}
+
 	ptr[i] = '\0';
 	return (ptr);
 }
 
 /**
- * new_dog - create a new dog
- * @name: name of new dog
- * @age: age of new dog
- * @owner: owner of new dog
- * Return: pointer to the new dog instance
+ * new_dog     - Create a new dog variable
+ * @name:        Name of the dog
+ * @age:         Age of the dog
+ * @owner:       Owner of the dog
+ * Return:       Pointer to new dog variable
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *snoopie;
@@ -47,26 +53,31 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		return (NULL);
 	}
-	buggie = malloc(sizeof(dog_t));
-	if (buggie == NULL)
+
+	snoopie = malloc(sizeof(dog_t));
+	if (snoopie == NULL)
 	{
 		return (NULL);
 	}
+
 	new_name = _copy(name);
 	if (new_name == NULL)
 	{
-		free(buggie);
+		free(snoopie);
 		return (NULL);
 	}
-	(*buggie).name =  new_name;
-	(*buggie).age = age;
+	(*snoopie).name = new_name;
+
+	(*snoopie).age = age;
+
 	new_owner = _copy(owner);
 	if (new_owner == NULL)
 	{
-		free((*buggie).name);
-		free(buggie);
+		free((*snoopie).name);
+		free(snoopie);
 		return (NULL);
 	}
-	(*buggie).owner = new_owner;
-	return (buggie);
+	(*snoopie).owner = new_owner;
+
+	return (snoopie);
 }
