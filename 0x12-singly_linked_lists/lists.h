@@ -8,7 +8,7 @@
 /**
  * struct list_sing - implementing a singly linked list
  * @str: string
- * @l: length of the string
+ * @len: length of the string
  * @next: points to the next node
  *
  * Description: singly linked list node structure
@@ -16,7 +16,7 @@
 typedef struct list_sing
 {
     char *str;
-    unsigned int l;
+    unsigned int len;
     struct list_sing *next;
 } list_t;
 
