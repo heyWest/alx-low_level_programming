@@ -15,9 +15,9 @@
  */
 typedef struct list_sing
 {
-    char *str;
-    unsigned int len;
-    struct list_sing *next;
+	char *str;
+	unsigned int len;
+	struct list_sing *next;
 } list_t;
 
 size_t print_list(const list_t *h);
